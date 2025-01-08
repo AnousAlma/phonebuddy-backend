@@ -22,7 +22,7 @@ secrets.json should be formatted in the following way:
     "universe_domain": "googleapis.com"
     }
 
-## Running the frontend
+## Running the backend
 
 After you are done with setup all you have to do is run
 
