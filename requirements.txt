@@ -1,0 +1,6 @@
+typing==3.7.4.3
+pymongo==4.10.1
+Flask==3.0.2
+Flask-Cors==4.0.0
+Flask-HTTPAuth==4.8.0
+firebase-admin==6.4.0
