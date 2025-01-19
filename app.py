@@ -24,8 +24,5 @@ def index():
     return jsonify("Inventory Tracker API V2024.04.02")
 
 
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=7070, debug=True)
-
-from flask_lambda import FlaskLambda
-app = FlaskLambda(app)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=7070, debug=True)
