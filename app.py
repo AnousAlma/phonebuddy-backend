@@ -10,7 +10,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 app.json = CustomJSONProvider(app)
 secrets_confiq.run_secrets_configurations()
-CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://10.0.29.185:7070"]}})
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://10.0.29.185:7070", "https://www.phonebuddy.store"]}})
 
 # Services
 app.register_blueprint(phones, url_prefix="/phones")
@@ -21,7 +21,11 @@ app.register_blueprint(files, url_prefix="/files")
 
 @app.route('/', methods=['GET'])
 def index():
-    return jsonify("Inventory Tracker API V2024.04.02")
+    return jsonify("Phone Buddy API V1")
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify("Phone Buddy API is healthy")
 
 
 if __name__ == '__main__':
