@@ -6,7 +6,6 @@ from firebase_admin import credentials, auth
 from firebase_admin.auth import UserRecord
 from models.user import User
 from mongodb_api.phone_buddy_db import PhoneBuddyDB
-import json
 
 firebase_cert = {
   "type": os.environ.get("type"),
@@ -22,7 +21,6 @@ firebase_cert = {
   "universe_domain": os.environ.get("universe_domain")
 }
 
-print(json.dumps(firebase_cert, indent=2))
 cred = credentials.Certificate(firebase_cert)
 APP = firebase_admin.initialize_app(cred)
 
